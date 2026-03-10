@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZenBot AI - v2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="authScreen" class="auth-screen">
+    <div class="auth-box">
+      <h1>ZenBot AI - v2</h1>
+      <p class="sub">A serverless AI-style chatbot experience</p>
+
+      <div class="auth-tabs">
+        <button id="showLoginBtn" class="active">Login</button>
+        <button id="showSignupBtn">Create Account</button>
+      </div>
+
+      <div id="loginForm" class="auth-form">
+        <input type="text" id="loginUsername" placeholder="Username" />
+        <input type="password" id="loginPassword" placeholder="Password" />
+        <button id="loginBtn">Login</button>
+        <p id="loginMsg" class="msg"></p>
+      </div>
+
+      <div id="signupForm" class="auth-form hidden">
+        <input type="text" id="signupUsername" placeholder="Create username" />
+        <input type="password" id="signupPassword" placeholder="Create password" />
+        <button id="signupBtn">Create Account</button>
+        <p id="signupMsg" class="msg"></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="appScreen" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand">
+        <h2>ZenBot AI - v2</h2>
+        <p>Smart Cloud Chat</p>
+      </div>
+
+      <button id="newChatBtn" class="new-chat-btn">+ New Chat</button>
+
+      <div class="section-title">Chat History</div>
+      <div id="chatHistoryList" class="history-list"></div>
+
+      <div class="sidebar-bottom">
+        <div class="section-title">Study Tools</div>
+
+        <div class="pdf-panel">
+          <input type="text" id="pdfUrlInput" placeholder="Paste PDF URL..." />
+          <button id="processPdfBtn" class="side-btn">Process PDF</button>
+
+          <input type="text" id="documentIdInput" placeholder="Document ID will appear here" />
+          <button id="askPdfBtn" class="side-btn">Ask From PDF</button>
+
+          <p id="pdfStatusMsg" class="msg"></p>
+        </div>
+
+        <button id="viewLoginHistoryBtn" class="side-btn">Login Times</button>
+        <button id="profileBtn" class="side-btn">Profile Settings</button>
+        <button id="logoutBtn" class="side-btn logout">Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-chat">
+      <header class="topbar">
+        <div>
+          <h3>ZenBot AI - v2</h3>
+          <p id="welcomeText">Welcome</p>
+        </div>
+      </header>
+
+      <section id="chatContainer" class="chat-container">
+        <div class="bot-message">
+          <div class="avatar">Z</div>
+          <div>
+            <div class="bubble">Hello! I am ZenBot AI - v2. Start a new chat and ask me something.</div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="chat-input-area">
+        <div class="input-wrap">
+          <textarea id="messageInput" placeholder="Message ZenBot AI - v2..." rows="1"></textarea>
+          <button id="sendBtn">Send</button>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <div id="projectPopup" class="modal hidden">
+    <div class="modal-card">
+      <button class="close-btn" id="closeProjectPopup">✕</button>
+      <h2>About This Project</h2>
+      <p><strong>ZenBot AI - v2</strong> is a serverless chatbot project.</p>
+      <p>Built by <strong>MD Naimur Rashid</strong>, <strong>Sourav Chakraborty</strong>, and <strong>MD Rohan</strong>.</p>
+      <p>This system uses S3, API Gateway, AWS Lambda, DynamoDB, and Cognito-based setup resources.</p>
+      <p>It supports login-style access, chat history, session reuse, cloud-hosted backend processing, Wikipedia-based knowledge retrieval, and PDF-based educational Q&A.</p>
+    </div>
+  </div>
+
+  <div id="profileModal" class="modal hidden">
+    <div class="modal-card small">
+      <button class="close-btn" id="closeProfileModal">✕</button>
+      <h2>Profile Settings</h2>
+      <input type="text" id="profileUsername" placeholder="New username" />
+      <input type="password" id="profilePassword" placeholder="New password" />
+      <button id="saveProfileBtn">Save Changes</button>
+      <p id="profileMsg" class="msg"></p>
+    </div>
+  </div>
+
+  <div id="loginHistoryModal" class="modal hidden">
+    <div class="modal-card medium">
+      <button class="close-btn" id="closeLoginHistoryModal">✕</button>
+      <h2>Login History</h2>
+      <div id="loginHistoryList" class="login-history-list"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
