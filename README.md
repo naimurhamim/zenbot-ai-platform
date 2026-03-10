@@ -27,3 +27,11 @@ Frontend → API Gateway → Lambda → DynamoDB
 ## Live Demo
 
 ZenBot: http://project-proposal-website.s3-website-ap-southeast-2.amazonaws.com/
+
+
+## 📄 Project Report
+
+You can read the full project report here:
+
+[ZenBot Project Report](report/zenbot_project_report.pdf)
+
