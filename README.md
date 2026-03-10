@@ -33,5 +33,5 @@ ZenBot: http://project-proposal-website.s3-website-ap-southeast-2.amazonaws.com/
 
 You can read the full project report here:
 
-[ZenBot Project Report](report/zenbot_project_report.pdf)
+[ZenBot Project Report](report/project_report.pdf)
 
